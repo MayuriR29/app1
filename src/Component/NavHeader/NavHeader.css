@@ -1,0 +1,70 @@
+.header-wrapper {
+    /* css 'visible will distort the page', but 'overlay' might not be supported in firefox */
+    overflow-y: overlay;
+  }
+  
+  .header-wrapper div.ant-layout-header {
+    padding: 0;
+  }
+  
+  .header-mobile {
+    background: #001529;
+  }
+  
+  .logo {
+    width: 48px;
+    height: 48px;
+    margin: .5em 1em;
+    /* margin-left: auto; */
+  }
+  
+  .sign-up-button {
+    margin: 1em 1em 0 auto;
+  }
+  
+  .avatar {
+    margin-left: auto;
+    color: white;
+    padding: 0 1em;
+    cursor: pointer;
+  }
+  
+  .avatar:hover {
+    background-color: rgba(255, 255, 255, 0.342);
+  }
+  
+  .avatar .avatar-username {
+    margin-left: .75em;
+  }
+  
+  .header {
+    display: inline-flex;
+    width: 100%;
+  }
+  
+  .nav-bar-desktop {
+    display: block;
+  }
+  
+  .menu-btn-wrapper {
+    display: none;
+  }
+  
+  .ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected{
+    background-color: rgba(255, 255, 255, 0.342);
+  }
+  
+  @media screen and (max-width:800px) {
+    .nav-bar-desktop {
+      display: none;
+    }
+  
+    .menu-btn-wrapper{
+      display: block;
+    }
+  
+    .logo {
+      margin-left: auto;
+    }
+  }
+  
