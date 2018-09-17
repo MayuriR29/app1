@@ -1,10 +1,28 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, Layout,Button } from "antd";
-import './NavHeader.css'
+import { Menu, Layout, Button } from "antd";
+import "./NavHeader.css";
+import SignInSignUpModal from "../SignInSignUpModal/SignInSignUpModal";
 
 const { Header } = Layout;
 class NavHeader extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isModalVisible: false
+    };
+  }
+
+  showModal = () => {
+    this.setState({
+      isModalVisible: true
+    });
+  };
+
+  handleCancel = () => {
+    this.setState({ isModalVisible: false });
+  };
+
   render() {
     return (
       <div className="header-wrapper">
@@ -26,9 +44,17 @@ class NavHeader extends Component {
               <NavLink to="/user/username"> User</NavLink>
             </Menu.Item>
           </Menu>
-          <Button type="primary" className="sign-up-button" onClick={this.showModal} >
-          Sign Up
-        </Button>
+          <Button
+            type="primary"
+            className="sign-up-button"
+            onClick={this.showModal}
+          >
+            Sign Up/Sign In
+          </Button>
+          <SignInSignUpModal
+            showModal={this.state.isModalVisible}
+            closeModal={this.handleCancel}
+          />
         </Header>
       </div>
     );

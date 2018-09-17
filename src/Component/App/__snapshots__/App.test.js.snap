@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shpuld render snapshot correctly 1`] = `
+<div>
+  <Adapter
+    className="layout"
+  >
+    <BrowserRouter>
+      <div>
+        <NavHeader />
+        <Adapter
+          style={
+            Object {
+              "padding": "0 50px",
+            }
+          }
+        >
+          <ContentRoutes />
+        </Adapter>
+        <Adapter
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          Ant Design ©2018 Created by Ant UED
+        </Adapter>
+      </div>
+    </BrowserRouter>
+  </Adapter>
+</div>
+`;
