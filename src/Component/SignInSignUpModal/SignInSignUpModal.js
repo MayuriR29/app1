@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import { Modal, Button } from "antd";
+import { Modal, Tabs } from "antd";
+import SignInForm from "../SignInForm/SignInForm";
+import SignUpForm from '../SignUpForm/SignUpForm';
+
+const TabPane = Tabs.TabPane;
 
 class SignInSignUpModal extends Component {
   constructor() {
@@ -16,25 +20,16 @@ class SignInSignUpModal extends Component {
           visible={this.props.showModal}
           title="Welcome to Recipe Finder"
           onCancel={this.props.closeModal}
-          footer={[
-            <Button key="back" onClick={this.props.closeModal}>
-              Return
-            </Button>,
-            <Button
-              key="submit"
-              type="primary"
-              loading={loading}
-              onClick={this.handleOk}
-            >
-              Submit
-            </Button>
-          ]}
+          footer={[]}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+          <Tabs defaultActiveKey="1">
+            <TabPane tab="Sign In" key="1">
+              <SignInForm />
+            </TabPane>
+            <TabPane tab="Sign Up" key="2">
+              <SignUpForm />
+            </TabPane>
+          </Tabs>
         </Modal>
       </div>
     );
