@@ -19,7 +19,7 @@ class App extends Component {
                 <ContentRoutes />
               </Content>
               <Footer style={{ textAlign: "center" }}>
-                Ant Design ©2018 Created by Ant UED
+                Recipe Finder ©2018 Created by Ant UED
               </Footer>
             </div>
           </Router>
